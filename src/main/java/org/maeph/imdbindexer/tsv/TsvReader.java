@@ -3,7 +3,6 @@ package org.maeph.imdbindexer.tsv;
 import com.google.gson.Gson;
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.bulk.BulkRequest;
 import org.elasticsearch.action.index.IndexRequest;

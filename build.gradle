@@ -4,7 +4,10 @@ plugins {
     id "de.undercouch.download" version "3.4.2"
     id "java"
     id 'net.ltgt.apt' version '0.10'
+    id "application"
 }
+
+mainClassName="org.maeph.imdbindexer.tsv.TsvReader"
 
 repositories {
     jcenter()
@@ -30,6 +33,9 @@ task downloadImdbFiles(type: Download) {
           'https://datasets.imdbws.com/title.crew.tsv.gz',
           'https://datasets.imdbws.com/title.ratings.tsv.gz'
     ])
-    dest buildDir
-    overwrite false
+    dest 'src/main/resources'
+    overwrite true
 }
+
+
+    tasks.processResources.dependsOn 'downloadImdbFiles'
