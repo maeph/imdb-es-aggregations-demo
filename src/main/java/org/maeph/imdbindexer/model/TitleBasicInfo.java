@@ -16,8 +16,8 @@ public class TitleBasicInfo {
     String primaryTitle;
     String originalTitle;
     Boolean isAdult;
-    Integer startYear;
-    Integer endYear;
+    String startDate;
+    String endDate;
     Integer runtimeMinutes;
     String[] genres;
 }

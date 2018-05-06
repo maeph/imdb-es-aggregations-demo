@@ -111,8 +111,8 @@ public class TsvReader {
                 .primaryTitle(tokenizer.nextToken())
                 .originalTitle(tokenizer.nextToken())
                 .isAdult(!tokenizer.nextToken().equals("0"))
-                .startYear(getOptionalIntValue((tokenizer)))
-                .endYear(getOptionalIntValue(tokenizer))
+                .startDate(getOptionalStringValue(tokenizer) + "/01/01")
+                .endDate(getOptionalStringValue(tokenizer) + "/01/01")
                 .runtimeMinutes(getOptionalIntValue(tokenizer))
                 .genres(getMovieGenres(tokenizer))
                 .build();
